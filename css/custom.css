@@ -3,7 +3,7 @@
     /* display: flex; */
   }
 
-  
+
   
   .header {
     margin-top: 1.5rem;
@@ -331,6 +331,9 @@
   .address {
     font-size: 1.25rem;
     text-align: left;
+    word-wrap: break-word; /* Allows long words to be broken and wrapped to the next line */
+    overflow-wrap: break-word; /* Ensures text breaks and wraps to avoid spilling out */
+    max-width: 100%; 
   }
   
   p.social {
@@ -939,3 +942,51 @@
     background-color: #ededed
   }
   
+
+/* ADD RESPONSIVENESS TO PHOTO AND ADDRESS */
+    /* Default style for larger screens */
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+@media (max-width: 549px) {
+  .columns .photo {
+      max-width: 40%; 
+      height: auto;
+  }
+  .columns .address {
+    max-width: 60%; 
+    height: auto;
+    /* text-align: center; */
+}
+ .address{
+  padding-left: 50px;
+ }
+}
+
+
+/* Adjustments for screens smaller than 768px */
+/* @media (max-width: 768px) {
+  .responsive-img {
+      max-width: 40%; 
+      height: auto;
+      align-self: center;
+  }
+  .three.columns > .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .three.columns > .row .responsive-img {
+      max-width: 40%;
+      height: auto;
+  }
+
+  .three.columns > .row.address {
+      flex: 1; 
+      padding-left: 0px; 
+  }
+} */
